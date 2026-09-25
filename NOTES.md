@@ -18,6 +18,5 @@
 
 - `claude --version` → `2.1.223 (Claude Code)`, confirmed working.
 - `CLAUDE.md` was generated with `/init`, then trimmed by hand.
-- Verified using the Claude Code IDE client (desktop app) rather than the CLI's `/memory` and `/permissions` screens, which open an interactive terminal panel not available in that client.
-  - **CLAUDE.md loaded:** confirmed — opening this project automatically loaded the full contents of `CLAUDE.md` into the session context before any request was made.
-  - **Permissions applied:** confirmed — `.claude/settings.json` is committed at the project root, which is the file Claude Code reads for allow/ask/deny rules in this client too.
+- Ran `/memory` in a fresh Claude Code session: it showed the project `CLAUDE.md` loaded, with the Commands, Architecture, and Conventions sections displayed exactly as committed.
+- Ran `/permissions` in the same session: the Allow tab listed `Bash(npm run lint:*)` and `Bash(npm test:*)`, matching `.claude/settings.json`. The Ask and Deny tabs are in the same menu.
